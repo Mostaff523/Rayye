@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:rayye/constants/routes.dart';
 import 'package:rayye/helpers/loading/loading_screen.dart';
 import 'package:rayye/l10n/app_localizations.dart';
 import 'package:rayye/services/auth/bloc/auth_bloc.dart';
