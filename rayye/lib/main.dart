@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:rayye/constants/routes.dart';
 import 'package:rayye/helpers/loading/loading_screen.dart';
+import 'package:rayye/l10n/app_localizations.dart';
 import 'package:rayye/services/auth/bloc/auth_bloc.dart';
 import 'package:rayye/services/auth/bloc/auth_event.dart';
 import 'package:rayye/services/auth/bloc/auth_state.dart';
@@ -14,7 +15,6 @@ import 'package:rayye/views/register_view.dart';
 import 'package:rayye/views/verify_email_view.dart';
 import 'package:rayye/screens/app_shell.dart';
 import 'package:rayye/theme/app_theme.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
