@@ -129,8 +129,8 @@ class _AddZoneScreenState extends State<AddZoneScreen> {
                   const SizedBox(height: 8),
                   TextFormField(
                     controller: _nameCtrl,
-                    decoration: const InputDecoration(
-                        hintText: 'e.g. Herb Garden, Balcony Pots'),
+                    decoration:
+                        const InputDecoration(hintText: 'e.g. Balcony Pots'),
                     validator: (v) => (v == null || v.trim().isEmpty)
                         ? 'Please enter a name'
                         : null,

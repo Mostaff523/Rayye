@@ -5,30 +5,45 @@ enum MoistureStatus { dry, optimal, wet }
 extension MoistureStatusExt on MoistureStatus {
   String get label {
     switch (this) {
-      case MoistureStatus.dry:     return 'Dry';
-      case MoistureStatus.optimal: return 'Optimal';
-      case MoistureStatus.wet:     return 'Wet';
+      case MoistureStatus.dry:
+        return 'Dry';
+      case MoistureStatus.optimal:
+        return 'Optimal';
+      case MoistureStatus.wet:
+        return 'Wet';
     }
   }
+
   String get emoji {
     switch (this) {
-      case MoistureStatus.dry:     return '🌵';
-      case MoistureStatus.optimal: return '🌱';
-      case MoistureStatus.wet:     return '💧';
+      case MoistureStatus.dry:
+        return '🌵';
+      case MoistureStatus.optimal:
+        return '🌱';
+      case MoistureStatus.wet:
+        return '💧';
     }
   }
+
   Color get color {
     switch (this) {
-      case MoistureStatus.dry:     return const Color(0xFFD4860A);
-      case MoistureStatus.optimal: return const Color(0xFF4A7C2F);
-      case MoistureStatus.wet:     return const Color(0xFF4A9EBF);
+      case MoistureStatus.dry:
+        return const Color(0xFFD4860A);
+      case MoistureStatus.optimal:
+        return const Color(0xFF4A7C2F);
+      case MoistureStatus.wet:
+        return const Color(0xFF4A9EBF);
     }
   }
+
   Color get bgColor {
     switch (this) {
-      case MoistureStatus.dry:     return const Color(0xFFFFF3DC);
-      case MoistureStatus.optimal: return const Color(0xFFEAF4DF);
-      case MoistureStatus.wet:     return const Color(0xFFDCF2FA);
+      case MoistureStatus.dry:
+        return const Color(0xFFFFF3DC);
+      case MoistureStatus.optimal:
+        return const Color(0xFFEAF4DF);
+      case MoistureStatus.wet:
+        return const Color(0xFFDCF2FA);
     }
   }
 }
@@ -72,7 +87,7 @@ const List<String> kSensorTypes = [
   'DHT11 (temp + humidity)',
   'DHT22 (temp + humidity)',
   'SHT30 (I2C)',
-  'Simulated / Demo',
+  'Capacitive (I2C)',
 ];
 
 // ── Zone model ────────────────────────────────────────────────────────────
@@ -112,19 +127,20 @@ class PlantZone {
     bool? pumpActive,
     DateTime? lastIrrigated,
     List<double>? moistureHistory,
-  }) => PlantZone(
-    id: id,
-    name: name,
-    plantType: plantType,
-    soilType: soilType,
-    sensorType: sensorType,
-    icon: icon,
-    moisture: moisture ?? this.moisture,
-    threshold: threshold ?? this.threshold,
-    pumpActive: pumpActive ?? this.pumpActive,
-    lastIrrigated: lastIrrigated ?? this.lastIrrigated,
-    moistureHistory: moistureHistory ?? this.moistureHistory,
-  );
+  }) =>
+      PlantZone(
+        id: id,
+        name: name,
+        plantType: plantType,
+        soilType: soilType,
+        sensorType: sensorType,
+        icon: icon,
+        moisture: moisture ?? this.moisture,
+        threshold: threshold ?? this.threshold,
+        pumpActive: pumpActive ?? this.pumpActive,
+        lastIrrigated: lastIrrigated ?? this.lastIrrigated,
+        moistureHistory: moistureHistory ?? this.moistureHistory,
+      );
 }
 
 class SystemStatus {

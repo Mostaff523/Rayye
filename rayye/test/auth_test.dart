@@ -4,8 +4,8 @@ import 'package:rayye/services/auth/auth_provider.dart';
 import 'package:rayye/services/auth/auth_user.dart';
 
 void main() {
-  group('Mock Authentication', () {
-    final provider = MockAuthProvider();
+  group('Authentication', () {
+    final provider = TestAuthProvider();
     test('Should not be initialized to begin with', () {
       expect(provider.isInitialized, false);
     });
@@ -78,7 +78,7 @@ void main() {
 
 class NotInitializedException implements Exception {}
 
-class MockAuthProvider implements AuthProvider {
+class TestAuthProvider implements AuthProvider {
   AuthUser? _user;
   var _isInitialized = false;
   bool get isInitialized => _isInitialized;
