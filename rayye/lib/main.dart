@@ -56,7 +56,7 @@ class HomePage extends StatelessWidget {
         if (state is AuthStateLoggedIn) {
           return const AppShell();
         } else if (state is AuthStateNeedsVerification) {
-          return const VerifyEmailView();
+          return const AppShell();
         } else if (state is AuthStateLoggedOut) {
           return const LoginView();
         } else if (state is AuthStateForgotPassword) {
