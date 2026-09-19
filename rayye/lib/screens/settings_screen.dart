@@ -112,7 +112,7 @@ class SettingsScreen extends StatelessWidget {
           Text('Smart Irrigation System',
               style:
                   TextStyle(fontWeight: FontWeight.w600, color: AppTheme.moss)),
-          Text('NASA, but for basil.',
+          Text('Rayye Inc. 2026 ©',
               style: TextStyle(fontSize: 12, color: AppTheme.bark)),
         ])),
         const SizedBox(height: 24),
