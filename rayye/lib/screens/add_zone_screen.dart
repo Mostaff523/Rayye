@@ -23,7 +23,7 @@ class _AddZoneScreenState extends State<AddZoneScreen> {
   static const _icons = [
     '🌿',
     '🍅',
-    '💜',
+    '🥔',
     '🌴',
     '🌻',
     '🥦',
@@ -86,7 +86,7 @@ class _AddZoneScreenState extends State<AddZoneScreen> {
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                  _Label('Pick an icon'),
+                  const _Label('Pick an icon'),
                   const SizedBox(height: 10),
                   Wrap(
                     spacing: 10,
@@ -125,7 +125,7 @@ class _AddZoneScreenState extends State<AddZoneScreen> {
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                  _Label('Zone name'),
+                  const _Label('Zone name'),
                   const SizedBox(height: 8),
                   TextFormField(
                     controller: _nameCtrl,
@@ -144,7 +144,7 @@ class _AddZoneScreenState extends State<AddZoneScreen> {
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                  _Label('Plant type'),
+                  const _Label('Plant type'),
                   const SizedBox(height: 8),
                   _Dropdown<String>(
                     value: _plantType,
@@ -160,7 +160,7 @@ class _AddZoneScreenState extends State<AddZoneScreen> {
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                  _Label('Soil type'),
+                  const _Label('Soil type'),
                   const SizedBox(height: 8),
                   _Dropdown<String>(
                     value: _soilType,
@@ -176,7 +176,7 @@ class _AddZoneScreenState extends State<AddZoneScreen> {
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                  _Label('Sensor type'),
+                  const _Label('Sensor type'),
                   const SizedBox(height: 8),
                   _Dropdown<String>(
                     value: _sensorType,
@@ -195,7 +195,7 @@ class _AddZoneScreenState extends State<AddZoneScreen> {
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _Label('Auto-water threshold'),
+                        const _Label('Auto-water threshold'),
                         Container(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 3),

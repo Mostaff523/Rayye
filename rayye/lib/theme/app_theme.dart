@@ -17,7 +17,7 @@ class AppTheme {
   static ThemeData get theme => ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: sand,
-        colorScheme: ColorScheme(
+        colorScheme: const ColorScheme(
           brightness: Brightness.light,
           primary: leaf,
           onPrimary: Colors.white,
@@ -92,7 +92,7 @@ class AppTheme {
           thumbColor: sprout,
           inactiveTrackColor: mist,
         ),
-        navigationBarTheme: NavigationBarThemeData(
+        navigationBarTheme: const NavigationBarThemeData(
           backgroundColor: Colors.white,
           indicatorColor: mist,
         ),

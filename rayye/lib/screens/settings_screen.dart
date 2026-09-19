@@ -18,7 +18,7 @@ class SettingsScreen extends StatelessWidget {
       appBar:
           AppBar(title: const Text('Settings'), backgroundColor: AppTheme.moss),
       body: ListView(padding: const EdgeInsets.all(16), children: [
-        _SectionHeader('System'),
+        const _SectionHeader('System'),
         _Card(children: [
           SwitchListTile(
             secondary: const Icon(Icons.auto_mode, color: AppTheme.leaf),
@@ -32,7 +32,7 @@ class SettingsScreen extends StatelessWidget {
           ),
         ]),
         const SizedBox(height: 16),
-        _SectionHeader('Zone Thresholds'),
+        const _SectionHeader('Zone Thresholds'),
         _Card(
             children: svc.zones.asMap().entries.map((e) {
           final i = e.key;
@@ -78,18 +78,18 @@ class SettingsScreen extends StatelessWidget {
           ]);
         }).toList()),
         const SizedBox(height: 16),
-        _SectionHeader('About'),
-        _Card(children: [
+        const _SectionHeader('About'),
+        const _Card(children: [
           _InfoTile(Icons.info_outline, 'Version', '1.0.0 MVP'),
-          const Divider(height: 0),
+          Divider(height: 0),
           _InfoTile(Icons.developer_mode, 'Mode', 'Live system'),
-          const Divider(height: 0),
+          Divider(height: 0),
           _InfoTile(Icons.memory, 'Hardware', 'ESP32 / Arduino'),
-          const Divider(height: 0),
+          Divider(height: 0),
           _InfoTile(Icons.wifi, 'Connection', 'Wi-Fi / BLE'),
         ]),
         const SizedBox(height: 16),
-        _SectionHeader('Account'),
+        const _SectionHeader('Account'),
         _Card(children: [
           ListTile(
             leading: const Icon(Icons.logout, color: Colors.red),
@@ -105,14 +105,14 @@ class SettingsScreen extends StatelessWidget {
           ),
         ]),
         const SizedBox(height: 32),
-        Center(
+        const Center(
             child: Column(children: [
-          const Text('🌿', style: TextStyle(fontSize: 32)),
-          const SizedBox(height: 6),
-          const Text('Smart Irrigation System',
+          Text('🌿', style: TextStyle(fontSize: 32)),
+          SizedBox(height: 6),
+          Text('Smart Irrigation System',
               style:
                   TextStyle(fontWeight: FontWeight.w600, color: AppTheme.moss)),
-          const Text('NASA, but for basil.',
+          Text('NASA, but for basil.',
               style: TextStyle(fontSize: 12, color: AppTheme.bark)),
         ])),
         const SizedBox(height: 24),

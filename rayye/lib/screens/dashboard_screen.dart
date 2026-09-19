@@ -149,20 +149,20 @@ class DashboardScreen extends StatelessWidget {
         ),
 
         if (zones.isEmpty)
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
               child: Center(
             child: Padding(
-                padding: const EdgeInsets.all(40),
+                padding: EdgeInsets.all(40),
                 child: Column(children: [
-                  const Text('🌱', style: TextStyle(fontSize: 48)),
-                  const SizedBox(height: 12),
-                  const Text('No zones yet',
+                  Text('🌱', style: TextStyle(fontSize: 48)),
+                  SizedBox(height: 12),
+                  Text('No zones yet',
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
                           color: AppTheme.soil)),
-                  const SizedBox(height: 6),
-                  const Text('Tap "Add zone" to get started',
+                  SizedBox(height: 6),
+                  Text('Tap "Add zone" to get started',
                       style: TextStyle(color: AppTheme.bark)),
                 ])),
           )),

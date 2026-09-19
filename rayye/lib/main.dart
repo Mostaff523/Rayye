@@ -11,7 +11,6 @@ import 'package:rayye/services/irrigation/irrigation_service.dart';
 import 'package:rayye/views/forgot_password_view.dart';
 import 'package:rayye/views/login_view.dart';
 import 'package:rayye/views/register_view.dart';
-import 'package:rayye/views/verify_email_view.dart';
 import 'package:rayye/screens/app_shell.dart';
 import 'package:rayye/theme/app_theme.dart';
 

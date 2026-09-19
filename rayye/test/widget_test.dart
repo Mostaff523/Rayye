@@ -53,10 +53,10 @@ void main() {
     await tester.pumpWidget(
       BlocProvider<AuthBloc>(
         create: (_) => AuthBloc(_TestAuthProvider()),
-        child: MaterialApp(
+        child: const MaterialApp(
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          home: const HomePage(),
+          home: HomePage(),
         ),
       ),
     );
