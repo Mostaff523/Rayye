@@ -6,6 +6,7 @@ import '../services/auth/bloc/auth_bloc.dart';
 import '../services/auth/bloc/auth_event.dart';
 import '../theme/app_theme.dart';
 import '../utilities/dialogs/logout_dialog.dart';
+import 'connect_device.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -20,6 +21,18 @@ class SettingsScreen extends StatelessWidget {
       body: ListView(padding: const EdgeInsets.all(16), children: [
         const _SectionHeader('System'),
         _Card(children: [
+          ListTile(
+            leading: const Icon(Icons.bluetooth, color: AppTheme.leaf),
+            title: const Text('Connect Device',
+                style: TextStyle(
+                    fontWeight: FontWeight.w600, color: AppTheme.soil)),
+            subtitle: const Text('Connect an irrigation controller',
+                style: TextStyle(fontSize: 12, color: AppTheme.bark)),
+            trailing: const Icon(Icons.chevron_right, color: AppTheme.bark),
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const ConnectDeviceScreen())),
+          ),
+          const Divider(height: 0),
           SwitchListTile(
             secondary: const Icon(Icons.auto_mode, color: AppTheme.leaf),
             title: const Text('Auto Irrigation',

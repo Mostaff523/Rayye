@@ -151,4 +151,9 @@ class IrrigationService extends ChangeNotifier {
     _ticker?.cancel();
     super.dispose();
   }
+
+  void setZones(List<PlantZone> zones) {
+    _zones = zones;
+    notifyListeners();
+  }
 }
