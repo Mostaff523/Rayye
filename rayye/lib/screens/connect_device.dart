@@ -64,7 +64,7 @@ class _ConnectDeviceScreenState extends State<ConnectDeviceScreen> {
             ),
             const SizedBox(height: 20),
             DropdownButtonFormField<DeviceType>(
-              value: _deviceType,
+              initialValue: _deviceType,
               decoration: const InputDecoration(
                 labelText: 'Device type',
                 prefixIcon: Icon(Icons.memory),

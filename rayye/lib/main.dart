@@ -13,9 +13,15 @@ import 'package:rayye/views/login_view.dart';
 import 'package:rayye/views/register_view.dart';
 import 'package:rayye/screens/app_shell.dart';
 import 'package:rayye/theme/app_theme.dart';
+import 'package:supabase_flutter/supabase_flutter.dart' hide AuthState;
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Supabase.initialize(
+    url: "https://kyljykzolctlqlbcmytl.supabase.co",
+    // ignore: deprecated_member_use
+    anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt5bGp5a3pvbGN0bHFsYmNteXRsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4MTk0NDIsImV4cCI6MjEwNTM5NTQ0Mn0.zDPvJyx21F--4n2WKw5C4sJYa5bH8BHHVca2aGfAtb4"
+  );
   runApp(
     ChangeNotifierProvider(
       create: (_) => IrrigationService(),
@@ -33,6 +39,8 @@ void main() {
     ),
   );
 }
+
+final supabase = Supabase.instance.client;
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

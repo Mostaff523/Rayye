@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/plant_zone.dart';
@@ -52,6 +54,8 @@ class DashboardScreen extends StatelessWidget {
                             horizontal: 10, vertical: 4),
                         decoration: BoxDecoration(
                           color: status.connected
+                              // ignore: duplicate_ignore
+                              // ignore: deprecated_member_use
                               ? AppTheme.sprout.withOpacity(0.3)
                               : Colors.red.withOpacity(0.3),
                           borderRadius: BorderRadius.circular(20),
